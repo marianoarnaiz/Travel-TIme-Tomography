@@ -1,0 +1,6 @@
+scatter(TTDATA[:,1],TTDATA[:,2], markershape = :dtriangle, color = [:orange],xlim=(xmin,xmax),ylim=(ymin,ymax),zlim=(zmin,zmax),label="Stations")
+for ii=1:size(ALL_T,1)-1
+    plot!(ALL_RAYS[:,1,ii],ALL_RAYS[:,2,ii], color = [:blue],label="")
+end
+plot!(ALL_RAYS_Perturb[:,1,size(ALL_T,1)],ALL_RAYS[:,2,size(ALL_T,1)], color = [:blue],label="Rays")
+scatter!(TTDATA[:,4],TTDATA[:,5] , markershape = :circle, color = [:red], label="Events")
